@@ -1,0 +1,39 @@
+
+<div class="container-fluid ">
+    
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center mt-2">
+            <h3 class="pr_name"><span></span> RNFI OTP</h3>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="no-pdding login-box">
+        <div class="row no-margin w-100 main_box">
+            <div class="col-lg-6 col-md-6 log-det">
+                <h2>Verify OTP</h2>
+
+                <div class="text-box-cont mt-5">
+                    <form [formGroup]="otpForm" (ngSubmit)="verifyOtp()">
+                        <div class="form-group clearfix">
+                            <label for="userid" class="col-md-3 col-sm-5 col-xs-12">Enter OTP</label>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <input type="text" class="form-control " autocomplete="off" formControlName="otp"  />
+                            </div>
+                           
+                        </div>
+                    
+                        <div class="col-xs-12 form-group text-center mt-5">
+                            <button class="btn btn-success btn-round login_btn" type="submit">Verfiy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 box-de">
+                <div class="ditk-inf">
+                    <h2 class="w-100"> </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 style="color:green; padding: 10px;">Welcome to RNFI</h2>
+            <button class="btn btn-success mt-2" style="float: left;" (click)="getData()">Show Users</button>
+
+
+        </div>
+        <div class="col-md-6">
+            <div style="float: right;">
+                <ul>
+                    <li> {{username}}
+
+                    </li>
+
+                    <li>
+                        <button class="btn btn-danger " (click)="logout()">Logout</button>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="loader" *ngIf ="loader"></div>
+<div class="container" *ngIf="showuser">
+    <div class="row">
+
+        <div class="col-md-12">
+            <h4 style="text-align: center;">LIST OF PAYSPRINT USER </h4>
+        </div>
+
+
+        <form [formGroup]="testForm" (ngSubmit)="submit()">
+
+            <ng-container formArrayName="pivotalArr">
+                <div class="row" *ngFor="let item of testForm.get('pivotalArr')['controls']; let i=index"
+                    [formGroupName]="i">
+                    <div class="col-md-3">
+
+                        <input matInput formControlName="accountholder" class="form-control"
+                            placeholder="Accountholder Name">
+                    </div>
+                    <div class="col-md-3">
+
+                        <!-- <mat-label>Tea</mat-label> -->
+                        <input matInput formControlName="accountnumber" class="form-control"
+                            placeholder="Accountholder Number">
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <!-- <mat-label>Lemon</mat-label> -->
+                        <input matInput formControlName="bankname" class="form-control" placeholder="Bank Name">
+
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <!-- <mat-label>Lemon</mat-label> -->
+                        <input matInput formControlName="ifsccode" class="form-control" placeholder="ifsccode">
+
+
+                    </div>
+
+
+
+                </div>
+
+            </ng-container>
+
+
+
+
+            <div class="col-md-12 mt-4" style="float: right;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+
+
+
+
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div class="container" *ngIf="showuser">
+    <div class="row">
+
+        <div class="col-md-12">
+            <h4 style="text-align: center;">LIST OF PIVOTAL USER </h4>
+        </div>
+
+
+        <form [formGroup]="testForm" (ngSubmit)="submit()">
+
+            <ng-container formArrayName="pivotalArr">
+                <div class="row" *ngFor="let item of testForm.get('pivotalArr')['controls']; let i=index"
+                    [formGroupName]="i">
+                    <div class="col-md-3">
+
+                        <input matInput formControlName="accountholder" class="form-control"
+                            placeholder="Accountholder Name">
+                    </div>
+                    <div class="col-md-3">
+
+                        <input matInput formControlName="accountnumber" class="form-control"
+                            placeholder="Accountholder Number">
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <input matInput formControlName="bankname" class="form-control" placeholder="Bank Name">
+
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <input matInput formControlName="ifsccode" class="form-control" placeholder="ifsccode">
+
+
+                    </div>
+                </div>
+
+            </ng-container>
+
+            <div class="col-md-12 mt-4" style="float: right;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
