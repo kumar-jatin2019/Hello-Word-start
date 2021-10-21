@@ -11,6 +11,8 @@ import { AuthGuard } from './auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthIterceptor } from './auth-iterceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -24,7 +26,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    VerifyotpComponent
+    VerifyotpComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<h4>Data From Parent Using @input Decorater</h4>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Country</td>
+    </tr>
+    <tr *ngFor="let data of sendParentData">
+        <td>{{data.name}}</td>
+        <td>{{data.country}}</td>
+    </tr>
+</table>
+

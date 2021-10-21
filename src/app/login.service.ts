@@ -16,6 +16,8 @@ export class LoginService {
   loginUrl = environment.baseUrl;
   verifyUrl = environment.baseVerifyOtpUrl;
   userUrl = environment.baseGetUSerURl;
+  countryUrl = environment.basecountryUrl;
+  animalUrl= environment.randomAnimalsUrl;
  
 
   constructor(private http: HttpClient) { }
@@ -33,6 +35,21 @@ export class LoginService {
 
 
 
+getAllCountry():Observable<any> {
+  return this.http.get(this.countryUrl)
+  .pipe(
+    retry(1),
+    catchError(this.handleError)
+  )
+}  
+
+getAllDogs():Observable<any> {
+  return this.http.get(this.animalUrl)
+  .pipe(
+    retry(1),
+    catchError(this.handleError)
+  )
+}  
 
 
   // HttpClient API get() method => Fetch employee
@@ -65,7 +82,6 @@ export class LoginService {
   }
 
   getUsersData(formdata): Observable<any> {
-    
     return this.http.post(this.userUrl , formdata)
     .pipe(
       retry(1),

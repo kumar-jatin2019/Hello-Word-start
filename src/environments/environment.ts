@@ -6,7 +6,9 @@ export const environment = {
   production: true,
   baseUrl:'https://rnfi.co.in/latest-backup/api/app/task/login/login',
   baseVerifyOtpUrl:'https://rnfi.co.in/latest-backup/api/app/task/login/verifyOtp',
-  baseGetUSerURl:'https://paysprint.in/service-api/testangular/api/TestAngular/getDynamicform'
+  baseGetUSerURl:'https://paysprint.in/service-api/testangular/api/TestAngular/getDynamicform',
+  basecountryUrl:'http://universities.hipolabs.com/search?country=United+States',
+  randomAnimalsUrl:'https://api.publicapis.org/entries'
 };
 
 /*
